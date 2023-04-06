@@ -13,6 +13,22 @@ declare global {
       ipcRenderer: IpcRenderer
     }
   }
+
+  interface Window {
+    ipcRenderer: {
+      invoke: (...args: any) => void
+      on: (...args: any) => void
+      once: (...args: any) => void
+      postMessage: (...args: any) => void
+      removeAllListeners: (...args: any) => void
+      removeListener: (...args: any) => void
+      send: (...args: any) => void
+      sendSync: (...args: any) => void
+      sendTo: (...args: any) => void
+      sendToHost: (...args: any) => void
+      addListener: (...args: any) => void
+    }
+  }
 }
 
 export type User = {
