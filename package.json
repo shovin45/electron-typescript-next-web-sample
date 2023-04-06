@@ -1,7 +1,8 @@
 {
-  "private": true,
+  "license": "MIT",
   "main": "main/index.js",
-  "productName": "ElectronTypescriptNext",
+  "name": "electron-typescript-next-web-sample",
+  "version": "1.0.0",
   "scripts": {
     "clean": "rimraf dist main renderer/out renderer/.next",
     "dev": "npm run build-electron && electron .",
@@ -33,6 +34,13 @@
     "files": [
       "main",
       "renderer/out"
-    ]
+    ],
+    "win":{
+      "target": "nsis"
+    },
+    "nsis":{
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
